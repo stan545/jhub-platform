@@ -5,7 +5,7 @@
   "public": true,
   "regions": ["iad1"],
   "functions": {},
-  "env": [],
+  "env": {},
   "redirects": [
     {
       "source": "/index",
