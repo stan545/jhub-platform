@@ -1,5 +1,7 @@
 // State Management
 const MERCOR_LISTINGS_URL = "https://aws.api.mercor.com/work/listings-explore-page";
+const JOBS_PER_PAGE = 12;
+let currentPage = 1;
 let allJobs = [...jobsData];
 let filteredJobs = [...jobsData];
 let allBlogs = [...blogData];
@@ -122,6 +124,7 @@ function performSearch() {
                job.category.toLowerCase().includes(searchTerm);
     });
 
+    currentPage = 1;
     applyFilters();
 }
 
@@ -145,6 +148,7 @@ function applyFilters() {
         return matchesSearch && matchesCategory && matchesType && matchesLevel;
     });
 
+    currentPage = 1;
     renderJobs(filteredJobs);
 }
 
@@ -159,10 +163,17 @@ function renderJobs(jobs) {
                 <p style="color: #94a3b8; margin-top: 1rem;">Try adjusting your search or filters</p>
             </div>
         `;
+        renderPagination(jobs);
         return;
     }
 
-    jobsGrid.innerHTML = jobs.map(job => `
+    // Calculate pagination
+    const totalPages = Math.ceil(jobs.length / JOBS_PER_PAGE);
+    const startIndex = (currentPage - 1) * JOBS_PER_PAGE;
+    const endIndex = startIndex + JOBS_PER_PAGE;
+    const paginatedJobs = jobs.slice(startIndex, endIndex);
+
+    jobsGrid.innerHTML = paginatedJobs.map(job => `
         <div class="job-card">
             <div class="job-header">
                 <div>
@@ -182,6 +193,52 @@ function renderJobs(jobs) {
             </div>
         </div>
     `).join('');
+
+    renderPagination(jobs);
+}
+
+// Render Pagination Controls
+function renderPagination(jobs) {
+    const totalPages = Math.ceil(jobs.length / JOBS_PER_PAGE);
+    const paginationContainer = document.getElementById('paginationControls');
+    
+    if (!paginationContainer || totalPages <= 1) {
+        if (paginationContainer) paginationContainer.innerHTML = '';
+        return;
+    }
+
+    let paginationHTML = '<div class="pagination">';
+    
+    // Previous button
+    paginationHTML += `
+        <button class="pagination-btn" id="prevBtn" ${currentPage === 1 ? 'disabled' : ''} onclick="goToPage(${currentPage - 1})">
+            <i class="fas fa-chevron-left"></i> Previous
+        </button>
+    `;
+
+    // Page indicator
+    paginationHTML += `<span class="page-indicator">Page ${currentPage} of ${totalPages}</span>`;
+
+    // Next button
+    paginationHTML += `
+        <button class="pagination-btn" id="nextBtn" ${currentPage === totalPages ? 'disabled' : ''} onclick="goToPage(${currentPage + 1})">
+            Next <i class="fas fa-chevron-right"></i>
+        </button>
+    `;
+    
+    paginationHTML += '</div>';
+    paginationContainer.innerHTML = paginationHTML;
+}
+
+// Navigate to page
+function goToPage(page) {
+    const totalPages = Math.ceil(filteredJobs.length / JOBS_PER_PAGE);
+    if (page >= 1 && page <= totalPages) {
+        currentPage = page;
+        renderJobs(filteredJobs);
+        // Scroll to jobs section
+        document.getElementById('jobs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 async function loadMercorListings() {
