@@ -4,8 +4,6 @@
   "framework": "static",
   "public": true,
   "regions": ["iad1"],
-  "functions": {},
-  "env": {},
   "redirects": [
     {
       "source": "/index",
