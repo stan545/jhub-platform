@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Blog Post - JHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Geist', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, rgba(112, 104, 252, 0.1), rgba(236, 72, 153, 0.1));
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 2rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        .article-header p {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .article-body {
+            font-size: 1rem;
+        }
+
+        .article-body h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            border-left: 4px solid #7068FC;
+            padding-left: 1rem;
+        }
+
+        .article-body h3 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #333;
+        }
+
+        .article-body p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .article-body ul, .article-body ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .platform-card {
+            background: linear-gradient(135deg, rgba(112, 104, 252, 0.05), rgba(236, 72, 153, 0.05));
+            border-left: 4px solid #7068FC;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .platform-card h3 {
+            margin-top: 0;
+        }
+
+        .pros {
+            background: rgba(76, 175, 80, 0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .cons {
+            background: rgba(244, 67, 54, 0.1);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            border-left: 4px solid #f44336;
+        }
+
+        .referral-box {
+            background: #f0f4ff;
+            border: 2px solid #7068FC;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .referral-box a {
+            display: inline-block;
+            background: #7068FC;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .referral-box a:hover {
+            background: #5956d9;
+        }
+
+        .disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+            color: #856404;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #7068FC;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .author-bio {
+            background: rgba(112, 104, 252, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-top: 2px solid #7068FC;
+        }
+    </style>
+</head>
+<body>
+    <div class="article-container">
+        <a href="index.html" class="back-link">← Back to JHub</a>
+
+        <div class="article-header">
+            <div class="article-meta">
+                <span>📅 February 10, 2026</span>
+                <span>👤 JHub Editorial</span>
+                <span>⏱️ 8 min read</span>
+                <span>🏷️ Career Tips</span>
+            </div>
+            <h1>Annotation Platforms Compared: Mercor vs Traditional Freelance Sites</h1>
+            <p>How to choose the right platform for your AI annotation career—and understand what each offers.</p>
+        </div>
+
+        <div class="article-body">
+            <h2>Introduction: The Annotation Platform Landscape</h2>
+            <p>The AI annotation and data labeling market has evolved dramatically in recent years. While traditional freelance platforms like Upwork and Fiverr still host annotation projects, specialized platforms like Mercor have emerged to serve this market more directly.</p>
+            <p>But which is right for you? In this guide, we'll compare the key differences, pros, and cons of specialized annotation platforms versus traditional marketplaces.</p>
+
+            <div class="disclaimer">
+                <strong>📋 Transparency Note:</strong> JHub is compensated through referral commissions when you sign up for platforms via our links. This analysis is based on publicly available information and general user experiences, not internal platform data.
+            </div>
+
+            <h2>Platform Comparison Overview</h2>
+
+            <div class="platform-card">
+                <h3>Specialized Annotation Platforms (e.g., Mercor)</h3>
+                <p><strong>Primary Purpose:</strong> Directly connecting AI experts and annotators with companies building AI models.</p>
+                <p><strong>Target Users:</strong> Freelance professionals, subject matter experts, engineers, and full-time contractors.</p>
+            </div>
+
+            <div class="platform-card">
+                <h3>Traditional Freelance Marketplaces (e.g., Upwork, Fiverr)</h3>
+                <p><strong>Primary Purpose:</strong> General-purpose marketplaces for all types of freelance work (writing, design, coding, annotation, etc.).</p>
+                <p><strong>Target Users:</strong> Beginners to experienced freelancers in multiple industries.</p>
+            </div>
+
+            <h2>Key Differences</h2>
+
+            <h3>1. Job Sourcing</h3>
+            <p><strong>Specialized Platforms:</strong> Companies post AI annotation roles directly. The platform handles vetting and matching. You're "pitched" to opportunities by AI algorithms.</p>
+            <p><strong>Traditional Marketplaces:</strong> You browse project listings and bid on them. You compete with other freelancers for each project.</p>
+
+            <h3>2. Quality & Vetting</h3>
+            <p><strong>Specialized Platforms:</strong> Rigorous screening (often including interviews, assessments, and background checks). Fewer, higher-quality opportunities.</p>
+            <p><strong>Traditional Marketplaces:</strong> Mixed quality. Lower barrier to entry means more competition and variable project quality.</p>
+
+            <h3>3. Payment Structure</h3>
+            <p><strong>Specialized Platforms:</strong> Typically hourly rates or per-project flat fees. Fast payment cycles (weekly via Stripe/Wise).</p>
+            <p><strong>Traditional Marketplaces:</strong> Hourly, fixed-price, or milestone-based. Payment often held in escrow with platform taking 20-30% commission.</p>
+
+            <h3>4. Work Environment</h3>
+            <p><strong>Specialized Platforms:</strong> Require time-tracking software (e.g., Insightful app for Mercor). Strict confidentiality and non-compete agreements.</p>
+            <p><strong>Traditional Marketplaces:</strong> Less intrusive monitoring. More flexible terms. You often communicate directly with clients.</p>
+
+            <h2>Pros & Cons: Specialized Annotation Platforms</h2>
+
+            <div class="pros">
+                <strong>✅ Pros:</strong>
+                <ul>
+                    <li>Higher pay rates (often $30-$150/hour for specialized work)</li>
+                    <li>Curated opportunities—no need to bid or compete</li>
+                    <li>Professional environment with reputable companies</li>
+                    <li>Fast, reliable payment (weekly)</li>
+                    <li>Growing job volume as AI companies scale</li>
+                    <li>Skill development in cutting-edge AI projects</li>
+                </ul>
+            </div>
+
+            <div class="cons">
+                <strong>❌ Cons:</strong>
+                <ul>
+                    <li>Rigorous vetting process (can take weeks)</li>
+                    <li>Work tracking software required (privacy concern for some)</li>
+                    <li>Strict confidentiality rules—can't share experience publicly</li>
+                    <li>Non-compete clauses restrict direct client work</li>
+                    <li>Fewer opportunities if you don't pass vetting</li>
+                    <li>Tax burden: self-employed, no benefits</li>
+                </ul>
+            </div>
+
+            <h2>Pros & Cons: Traditional Freelance Marketplaces</h2>
+
+            <div class="pros">
+                <strong>✅ Pros:</strong>
+                <ul>
+                    <li>Low barrier to entry—start immediately</li>
+                    <li>Diverse work types (not just annotation)</li>
+                    <li>Flexible schedule and multiple projects available</li>
+                    <li>Direct communication with clients</li>
+                    <li>Can build long-term client relationships</li>
+                    <li>Less intrusive monitoring</li>
+                </ul>
+            </div>
+
+            <div class="cons">
+                <strong>❌ Cons:</strong>
+                <ul>
+                    <li>Lower pay rates ($5-$30/hour typically)</li>
+                    <li>Higher platform fees (20-30% commission)</li>
+                    <li>Need to bid on every project (competitive)</li>
+                    <li>Variable job quality</li>
+                    <li>Payment can be delayed (escrow hold periods)</li>
+                    <li>More scams and disputes</li>
+                    <li>Difficult to build annotation expertise reputation</li>
+                </ul>
+            </div>
+
+            <h2>Which Should You Choose?</h2>
+
+            <h3>Choose Specialized Platforms If:</h3>
+            <ul>
+                <li>You want consistent, reliable income from quality projects</li>
+                <li>You value expertise development over quantity</li>
+                <li>You don't mind being monitored during work hours</li>
+                <li>You have strong attention to detail and can pass vetting</li>
+                <li>You want to work with cutting-edge AI companies</li>
+            </ul>
+
+            <h3>Choose Traditional Marketplaces If:</h3>
+            <ul>
+                <li>You want to start immediately without long vetting</li>
+                <li>You prefer flexibility and control over pricing</li>
+                <li>You want to try annotation before committing</li>
+                <li>You prefer not having work-tracking software</li>
+                <li>You want to communicate directly with clients</li>
+            </ul>
+
+            <h2>Pro Tip: Do Both</h2>
+            <p>Many successful annotation professionals use both! Start with a traditional marketplace to build your portfolio and skills. Then, once you have experience, apply to specialized platforms like Mercor for higher-paying, more focused work.</p>
+
+            <div class="referral-box">
+                <h3>Ready to Get Started?</h3>
+                <p>Explore opportunities on Mercor's platform using our referral link below:</p>
+                <a href="https://mercor.com/?ref=jhub">Browse Mercor Opportunities</a>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">
+                    <em>By signing up via this link, you support JHub at no additional cost. We earn a small referral bonus if you're hired.</em>
+                </p>
+            </div>
+
+            <h2>Conclusion</h2>
+            <p>There's no universally "best" platform—it depends on your priorities. If you value higher pay and professional development, specialized platforms like Mercor are worth the vetting effort. If you want flexibility and immediate opportunities, traditional marketplaces remain valuable.</p>
+            <p>The key is to understand the trade-offs and choose what aligns with your career goals.</p>
+
+            <div class="author-bio">
+                <h3>About the Author</h3>
+                <p><strong>JHub Editorial Team</strong> covers platform comparisons, career tips, and industry trends for AI annotation professionals. This article represents a summary of publicly available platform information and general user experiences.</p>
+                <p><strong>Disclaimer:</strong> This is an informational article based on public information. Always review each platform's official Terms of Service before applying. Pay rates and features may change.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

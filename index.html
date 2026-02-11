@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHub - AI Annotation Jobs & Opportunities</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>JHub</h1>
+                <p class="tagline">AI Annotation Opportunities</p>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-search-mobile">
+                    <div class="nav-search-field">
+                        <input type="text" id="mobileSearchInput" placeholder="Search jobs..." aria-label="Search jobs">
+                        <button class="nav-search-submit" id="mobileSearchBtn" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="nav-search" id="navSearch">
+                    <input type="text" id="navSearchInput" placeholder="Search jobs..." aria-label="Search jobs">
+                </div>
+                <button class="icon-btn" id="navSearchBtn" type="button" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Notifications">
+                    <i class="far fa-bell"></i>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Profile">
+                    <i class="far fa-user"></i>
+                </button>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Next AI Annotation Opportunity</h1>
+                <p>Connect with top companies hiring for data annotation, labeling, and AI training projects</p>
+                <div class="hero-buttons">
+                    <a href="#jobs" class="btn btn-primary">Explore Jobs</a>
+                    <a href="#blog" class="btn btn-secondary">Read Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="search-section" id="search">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search jobs, companies, or keywords...">
+                <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="image">Image Annotation</option>
+                    <option value="text">Text Annotation</option>
+                    <option value="video">Video Annotation</option>
+                    <option value="audio">Audio Annotation</option>
+                </select>
+                <select id="typeFilter">
+                    <option value="">All Types</option>
+                    <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="onsite">On-site</option>
+                </select>
+                <select id="levelFilter">
+                    <option value="">All Levels</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="jobs-section">
+        <div class="container">
+            <h2 class="section-title">Latest Opportunities</h2>
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Jobs will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Latest from Our Blog</h2>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About JHub</h2>
+            <div class="about-content">
+                <p>JHub connects talented individuals with leading AI companies seeking annotation and data labeling professionals. We curate the best opportunities in the rapidly growing field of AI training and machine learning.</p>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>500+</h3>
+                        <p>Active Jobs</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>100+</h3>
+                        <p>Partner Companies</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>10K+</h3>
+                        <p>Happy Professionals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JHub</h3>
+                    <p>Your gateway to AI annotation opportunities</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#jobs">Jobs</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="legal.html">Legal & Disclaimer</a></li>
+                        <li><a href="sample-blog-post.html">Sample Blog Post</a></li>
+                        <li><a href="blog-guidelines.html">Blog Guidelines</a></li>
+                        <li><a href="pre-publish-checklist.html">Pre-Publish Checklist</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 JHub. All rights reserved.</p>
+                <p class="legal-notice">
+                    <strong>Disclaimer:</strong> JHub is an independent resource not affiliated with, endorsed by, or sponsored by Mercor or other listed platforms. 
+                    Some links are referral links that support this platform at no cost to you. 
+                    <a href="legal.html" style="color: inherit; text-decoration: underline;">Read our full legal policy</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

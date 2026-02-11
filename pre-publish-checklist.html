@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Publish Checklist - JHub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .checklist-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        .checklist-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+        .checklist-container .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        .checklist-container h2 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            border-bottom: 2px solid #7068FC;
+            padding-bottom: 0.5rem;
+        }
+        .checklist-section {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #7068FC;
+            margin-bottom: 1.5rem;
+        }
+        .checkbox-list {
+            list-style: none;
+            padding: 0;
+        }
+        .checkbox-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .checkbox-list li input[type="checkbox"] {
+            margin-right: 0.5rem;
+            margin-top: 0.3rem;
+            cursor: pointer;
+        }
+        .checker-label {
+            cursor: pointer;
+            flex: 1;
+            user-select: none;
+        }
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #7068FC;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            color: #856404;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        table th {
+            background: #f0f4ff;
+            font-weight: 600;
+            color: #333;
+        }
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: #7068FC;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .last-updated {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+        }
+        .btn-print {
+            display: inline-block;
+            background: #7068FC;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-print:hover {
+            background: #5956d9;
+        }
+        @media print {
+            .back-link, .btn-print, body::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(135deg, rgba(112, 104, 252, 0.1), rgba(236, 72, 153, 0.1));">
+    <div class="checklist-container">
+        <a href="index.html" class="back-link">← Back to JHub</a>
+        <button class="btn-print" onclick="window.print()">🖨️ Print This Checklist</button>
+        
+        <h1>JHub Blog Pre-Publish Checklist</h1>
+        <p class="subtitle">Before sending your blog post for publication, complete this checklist.</p>
+
+        <div class="checklist-section">
+            <h2>✅ Legal & Compliance</h2>
+            <ul class="checkbox-list">
+                <li>
+                    <input type="checkbox" id="check1">
+                    <label for="check1" class="checker-label"><strong>Affiliate Disclosure:</strong> Clear statement in intro or referral box?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check2">
+                    <label for="check2" class="checker-label"><strong>Independence Statement:</strong> Does the post clarify you're not representing the companies you mention?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check3">
+                    <label for="check3" class="checker-label"><strong>Source Attribution:</strong> All factual claims tied to public sources?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check4">
+                    <label for="check4" class="checker-label"><strong>No Confidential Info:</strong> Dashboard screenshots? Client names? Project details? ❌</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check5">
+                    <label for="check5" class="checker-label"><strong>No Unverifiable Claims:</strong> "Guaranteed to earn $X"? "Everyone says..."? ❌</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check6">
+                    <label for="check6" class="checker-label"><strong>No Logo Misuse:</strong> Using official company logos? ❌ Text labels only? ✅</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check7">
+                    <label for="check7" class="checker-label"><strong>Referral Links Working:</strong> Tested all URLs? Using YOUR unique tracking link?</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>📝 Content Quality</h2>
+            <ul class="checkbox-list">
+                <li>
+                    <input type="checkbox" id="check8">
+                    <label for="check8" class="checker-label"><strong>Compelling Headline</strong> (50-60 characters) - Keywords? Value promise?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check9">
+                    <label for="check9" class="checker-label"><strong>Strong Intro</strong> (1-2 paragraphs) - Hook? Summary? CTA?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check10">
+                    <label for="check10" class="checker-label"><strong>Clear Structure</strong> - Organized with H2 headers? Logical flow? Good conclusion?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check11">
+                    <label for="check11" class="checker-label"><strong>Accurate Information</strong> - Verified claims? Current data (≤6 months)? Relevant examples?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check12">
+                    <label for="check12" class="checker-label"><strong>Helpful Value</strong> - Solves a reader problem? Actionable steps? Better than competitors?</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>🔗 SEO & Links</h2>
+            <ul class="checkbox-list">
+                <li>
+                    <input type="checkbox" id="check13">
+                    <label for="check13" class="checker-label"><strong>Keyword in Title</strong></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check14">
+                    <label for="check14" class="checker-label"><strong>Keyword in First Paragraph</strong></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check15">
+                    <label for="check15" class="checker-label"><strong>Keyword in H2 Headers</strong> (at least one)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check16">
+                    <label for="check16" class="checker-label"><strong>Meta Description Ready</strong> (150-160 characters) - Compelling CTA?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check17">
+                    <label for="check17" class="checker-label"><strong>Internal Links</strong> (2-3 to related JHub posts)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check18">
+                    <label for="check18" class="checker-label"><strong>External Links</strong> (2-3 to authoritative sources)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check19">
+                    <label for="check19" class="checker-label"><strong>Referral Link in CTA Box</strong></label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check20">
+                    <label for="check20" class="checker-label"><strong>All Links Tested</strong></label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>📸 Images</h2>
+            <ul class="checkbox-list">
+                <li>
+                    <input type="checkbox" id="check21">
+                    <label for="check21" class="checker-label"><strong>Licensed</strong> (Unsplash, Pexels, Pixabay)?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check22">
+                    <label for="check22" class="checker-label"><strong>16:9 Aspect Ratio</strong> (1600×900 or similar)?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check23">
+                    <label for="check23" class="checker-label"><strong>Under 500KB</strong> file size?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check24">
+                    <label for="check24" class="checker-label"><strong>High Quality</strong> (no blurry/pixelated)?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check25">
+                    <label for="check25" class="checker-label"><strong>Descriptive Alt Text</strong> with keywords?</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>✨ Formatting & Style</h2>
+            <ul class="checkbox-list">
+                <li>
+                    <input type="checkbox" id="check26">
+                    <label for="check26" class="checker-label"><strong>One H1</strong> (the title)?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check27">
+                    <label for="check27" class="checker-label"><strong>Multiple H2 Sections</strong> with logical nesting?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check28">
+                    <label for="check28" class="checker-label"><strong>Bullet Points</strong> for lists?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check29">
+                    <label for="check29" class="checker-label"><strong>Professional Yet Conversational</strong> tone?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check30">
+                    <label for="check30" class="checker-label"><strong>Active Voice</strong> preferred?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check31">
+                    <label for="check31" class="checker-label"><strong>Short Paragraphs</strong> (2-3 sentences)?</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>📋 Metadata (for data.js entry)</h2>
+            <ul class="checkbox-list">
+                <li>
+                    <input type="checkbox" id="check32">
+                    <label for="check32" class="checker-label"><strong>ID:</strong> Unique number (e.g., 8)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check33">
+                    <label for="check33" class="checker-label"><strong>Title:</strong> Headline (≤60 chars)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check34">
+                    <label for="check34" class="checker-label"><strong>Date:</strong> "Month DD, YYYY" format</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check35">
+                    <label for="check35" class="checker-label"><strong>Excerpt:</strong> Preview text (≤160 chars)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check36">
+                    <label for="check36" class="checker-label"><strong>Image:</strong> Full image URL</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check37">
+                    <label for="check37" class="checker-label"><strong>Author:</strong> Your name or "JHub Editorial"</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-section">
+            <h2>✅ Final Checks</h2>
+            <ul class="checkbox-list">
+                <li>
+                    <input type="checkbox" id="check38">
+                    <label for="check38" class="checker-label"><strong>Proofread</strong> - Spell-checked? Grammar? Typos?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check39">
+                    <label for="check39" class="checker-label"><strong>Brand Consistency</strong> - Matches tone? Glassmorphism values?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check40">
+                    <label for="check40" class="checker-label"><strong>Complete</strong> - No "[FILL THIS IN]" placeholders?</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="check41">
+                    <label for="check41" class="checker-label"><strong>Mobile Friendly</strong> - Tested on phone?</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h2 style="margin-top: 0;">🚀 Ready to Submit?</h2>
+            <p><strong>If you checked all boxes above, your post is ready to publish!</strong></p>
+            <h3>Submit Your Post</h3>
+            <ul>
+                <li><strong>Email to:</strong> contact@jhub.com</li>
+                <li><strong>Subject:</strong> "Blog Post Submission: [Your Title]"</li>
+            </ul>
+            <h3>Include:</h3>
+            <ol>
+                <li>Full blog post content (in Markdown or plain text)</li>
+                <li>Image URL (or attached)</li>
+                <li>Metadata (title, date, author, excerpt, readTime)</li>
+                <li>Any special notes or formatting requests</li>
+            </ol>
+        </div>
+
+        <div class="warning-box">
+            <h2 style="margin-top: 0;">⚠️ Common Issues to Avoid</h2>
+            <table>
+                <tr>
+                    <th>Issue</th>
+                    <th>Solution</th>
+                </tr>
+                <tr>
+                    <td>Broken links</td>
+                    <td>Test every URL before submitting</td>
+                </tr>
+                <tr>
+                    <td>Wrong image size</td>
+                    <td>Resize to 1600×900 (16:9)</td>
+                </tr>
+                <tr>
+                    <td>Missing disclosure</td>
+                    <td>Add at top or in referral box</td>
+                </tr>
+                <tr>
+                    <td>Unverifiable claims</td>
+                    <td>Cite your sources or remove</td>
+                </tr>
+                <tr>
+                    <td>No referral link</td>
+                    <td>Include CTA box with tracked URL</td>
+                </tr>
+                <tr>
+                    <td>Outdated info</td>
+                    <td>Use current data from 2025-2026</td>
+                </tr>
+                <tr>
+                    <td>Poor formatting</td>
+                    <td>Use clear headers and bullet points</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="highlight-box">
+            <h2 style="margin-top: 0;">📞 Questions Before Publishing?</h2>
+            <p><strong>Email:</strong> contact@jhub.com<br>
+            <strong>Subject:</strong> "Blog Post Question: [Your Topic]"</p>
+            <p><strong>Don't publish without clarification on:</strong></p>
+            <ul>
+                <li>Whether your topic is appropriate</li>
+                <li>How to handle sensitive information</li>
+                <li>Accuracy of any claims you're making</li>
+                <li>Whether you need additional sources</li>
+            </ul>
+        </div>
+
+        <p class="last-updated"><strong>Last Updated:</strong> February 11, 2026</p>
+        
+        <a href="index.html" class="back-link">← Back to JHub</a>
+    </div>
+</body>
+</html>
