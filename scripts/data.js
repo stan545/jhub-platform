@@ -274,7 +274,8 @@ const blogData = [
         date: "February 8, 2026",
         excerpt: "Learn the fundamentals of AI annotation and discover how you can start your career in this growing field. We cover everything from basic concepts to landing your first job.",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-        author: "Sarah Johnson"
+        author: "Sarah Johnson",
+        link: "blog/getting-started-ai-annotation.html"
     },
     {
         id: 2,
@@ -282,7 +283,8 @@ const blogData = [
         date: "February 5, 2026",
         excerpt: "The AI annotation field is evolving rapidly. Discover the essential skills you need to stay competitive and advance your career in data labeling.",
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop",
-        author: "Mike Chen"
+        author: "Mike Chen",
+        link: "blog/top-10-skills-data-annotator.html"
     },
     {
         id: 3,
@@ -290,7 +292,8 @@ const blogData = [
         date: "February 1, 2026",
         excerpt: "Working remotely as an annotator comes with unique challenges. Here are proven strategies to maintain productivity and work-life balance.",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
-        author: "Emily Rodriguez"
+        author: "Emily Rodriguez",
+        link: "blog/remote-annotation-productivity.html"
     },
     {
         id: 4,
@@ -298,7 +301,8 @@ const blogData = [
         date: "January 28, 2026",
         excerpt: "A comprehensive guide to annotation job compensation, including factors that affect pay rates and how to negotiate better terms.",
         image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop",
-        author: "David Kim"
+        author: "David Kim",
+        link: "blog/understanding-pay-rates.html"
     },
     {
         id: 5,
@@ -306,7 +310,8 @@ const blogData = [
         date: "January 25, 2026",
         excerpt: "Explore the latest trends in AI training and data annotation. Learn how the industry is evolving and what opportunities lie ahead.",
         image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
-        author: "Lisa Thompson"
+        author: "Lisa Thompson",
+        link: "blog/future-ai-training-trends.html"
     },
     {
         id: 6,
@@ -314,17 +319,19 @@ const blogData = [
         date: "January 22, 2026",
         excerpt: "Balancing accuracy and efficiency is crucial in annotation work. Discover best practices for delivering high-quality work without sacrificing speed.",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
-        author: "James Wilson"
+        author: "James Wilson",
+        link: "blog/quality-vs-speed-balance.html"
     },
     {
         id: 7,
         title: "Annotation Platforms Compared: Mercor vs Traditional Freelance Sites",
         date: "February 10, 2026",
         excerpt: "Explore the differences between specialized AI annotation platforms (like Mercor) and traditional freelance marketplaces. Learn which might be right for your career goals.",
-        image: "https://images.unsplash.com/photo-1460925895917-adf4e565db13?w=800&h=400&fit=crop",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
         author: "JHub Editorial",
         category: "Career Tips",
         featured: true,
-        readTime: "8 min read"
+        readTime: "8 min read",
+        link: "blog/sample-blog-post.html"
     }
 ];

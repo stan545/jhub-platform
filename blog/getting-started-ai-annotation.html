@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with AI Annotation: A Beginner's Guide - JHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Geist', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, rgba(112, 104, 252, 0.1), rgba(236, 72, 153, 0.1));
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #7068FC;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover {
+            gap: 1rem;
+        }
+
+        .article-header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 2rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        .article-header .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .article-body {
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        .article-body h2 {
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            border-left: 4px solid #7068FC;
+            padding-left: 1rem;
+        }
+
+        .article-body h3 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            color: #2a2a2a;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body ul, .article-body ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+            border-left: 4px solid #7068FC;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            color: #7068FC;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #7068FC, #9D5CFF);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #7068FC;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .author-bio {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .author-bio h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .author-bio p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 1.5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .article-header h1 {
+                font-size: 2rem;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
+
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-container">
+        <a href="../index.html#blog" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to JHub
+        </a>
+
+        <article>
+            <header class="article-header">
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> February 8, 2026</span>
+                    <span><i class="far fa-user"></i> Sarah Johnson</span>
+                    <span><i class="far fa-clock"></i> 7 min read</span>
+                </div>
+                <h1>Getting Started with AI Annotation: A Beginner's Guide</h1>
+                <p class="subtitle">Learn the fundamentals of AI annotation and discover how you can start your career in this growing field.</p>
+            </header>
+
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="AI Annotation workspace" class="featured-image">
+
+            <div class="article-body">
+                <h2>What is AI Annotation?</h2>
+                <p>AI annotation, also called data labeling or data annotation, is the process of identifying and tagging raw data (images, text, audio, video) to train machine learning models. Think of it as teaching AI systems to recognize patterns by providing them with labeled examples.</p>
+                
+                <p>For instance, if you're training an AI to recognize cats in photos, annotators would label thousands of images as "cat" or "not cat." The AI learns from these labeled examples and eventually can identify cats in new, unseen photos.</p>
+
+                <h2>Why AI Annotation Matters</h2>
+                <p>AI annotation is the foundation of supervised machine learning—the most common type of AI development. Without high-quality labeled data:</p>
+                <ul>
+                    <li>Self-driving cars couldn't recognize pedestrians and traffic signs</li>
+                    <li>Voice assistants couldn't understand spoken commands</li>
+                    <li>Medical AI couldn't detect diseases in scans</li>
+                    <li>Chatbots couldn't provide relevant responses</li>
+                </ul>
+
+                <p>As AI becomes more sophisticated, the demand for skilled annotators continues to grow. Companies like OpenAI, Google, and hundreds of startups rely on annotation teams to power their AI systems.</p>
+
+                <h2>Types of AI Annotation Work</h2>
+
+                <h3>1. Image Annotation</h3>
+                <p>Drawing boxes, polygons, or masks around objects in images. Common uses include:</p>
+                <ul>
+                    <li>Object detection (identifying cars, people, animals)</li>
+                    <li>Semantic segmentation (labeling every pixel in an image)</li>
+                    <li>Facial recognition training</li>
+                </ul>
+
+                <h3>2. Text Annotation</h3>
+                <p>Labeling text data for natural language processing (NLP). Tasks include:</p>
+                <ul>
+                    <li>Sentiment analysis (marking text as positive/negative/neutral)</li>
+                    <li>Named entity recognition (identifying names, places, organizations)</li>
+                    <li>Text classification (categorizing documents by topic)</li>
+                </ul>
+
+                <h3>3. Audio Annotation</h3>
+                <p>Transcribing spoken words and labeling audio features:</p>
+                <ul>
+                    <li>Speech-to-text transcription</li>
+                    <li>Speaker identification</li>
+                    <li>Emotion detection in voice</li>
+                </ul>
+
+                <h3>4. Video Annotation</h3>
+                <p>Frame-by-frame labeling of video content:</p>
+                <ul>
+                    <li>Action recognition</li>
+                    <li>Object tracking across frames</li>
+                    <li>Scene understanding</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3><i class="fas fa-lightbulb"></i> Pro Tip</h3>
+                    <p>Start with text or image annotation if you're new to the field. These are the most accessible entry points and have the highest volume of available work.</p>
+                </div>
+
+                <h2>Skills You'll Need</h2>
+
+                <h3>Essential Skills</h3>
+                <ul>
+                    <li><strong>Attention to Detail:</strong> Accuracy is critical—mislabeled data can break AI models</li>
+                    <li><strong>Pattern Recognition:</strong> Ability to identify subtle differences and similarities</li>
+                    <li><strong>Computer Literacy:</strong> Comfort with web tools and annotation platforms</li>
+                    <li><strong>Focus & Consistency:</strong> Maintaining quality over hours of repetitive work</li>
+                </ul>
+
+                <h3>Nice-to-Have Skills</h3>
+                <ul>
+                    <li>Domain expertise (medical, legal, finance) for specialized projects</li>
+                    <li>Multiple languages for multilingual text annotation</li>
+                    <li>Basic coding knowledge for some advanced annotation roles</li>
+                </ul>
+
+                <h2>How to Get Your First Job</h2>
+
+                <h3>Step 1: Choose a Platform</h3>
+                <p>Start with platforms that have lower barriers to entry:</p>
+                <ul>
+                    <li><strong>Mercor:</strong> Specialized AI annotation platform with vetted opportunities</li>
+                    <li><strong>Scale AI:</strong> Various annotation projects (requires application)</li>
+                    <li><strong>Appen:</strong> Beginner-friendly, wide range of tasks</li>
+                    <li><strong>Lionbridge:</strong> Global opportunities, especially for multilingual work</li>
+                </ul>
+
+                <h3>Step 2: Complete Training</h3>
+                <p>Most platforms require you to pass qualification tests:</p>
+                <ul>
+                    <li>Read guidelines carefully (accuracy often matters more than speed)</li>
+                    <li>Practice on sample tasks before taking paid assessments</li>
+                    <li>Ask questions in community forums when stuck</li>
+                </ul>
+
+                <h3>Step 3: Start Small</h3>
+                <p>Begin with simple tasks to build your reputation:</p>
+                <ul>
+                    <li>Accept projects within your skill level</li>
+                    <li>Focus on quality over quantity initially</li>
+                    <li>Build a track record of accurate work</li>
+                </ul>
+
+                <div class="cta-box">
+                    <h3>Ready to Start Your AI Annotation Career?</h3>
+                    <p style="margin-bottom: 1.5rem;">Browse current annotation opportunities from multiple platforms:</p>
+                    <a href="../index.html#jobs" class="cta-btn">View All Job Listings</a>
+                </div>
+
+                <h2>What to Expect: Pay & Work Environment</h2>
+
+                <h3>Typical Pay Rates</h3>
+                <ul>
+                    <li><strong>Entry-level:</strong> $8-15/hour for basic tasks</li>
+                    <li><strong>Intermediate:</strong> $15-30/hour with domain knowledge</li>
+                    <li><strong>Expert-level:</strong> $30-150/hour for specialized work (medical, legal, coding)</li>
+                </ul>
+
+                <h3>Work Schedule</h3>
+                <p>Most annotation work is flexible and remote:</p>
+                <ul>
+                    <li>Set your own hours (though some projects have deadlines)</li>
+                    <li>Work from anywhere with internet access</li>
+                    <li>Part-time or full-time, depending on project availability</li>
+                </ul>
+
+                <h2>Common Mistakes to Avoid</h2>
+                <ul>
+                    <li><strong>Rushing for speed:</strong> Quality matters more than quantity—rushed work leads to rejections</li>
+                    <li><strong>Ignoring guidelines:</strong> Every project has specific instructions; follow them precisely</li>
+                    <li><strong>Skipping quality checks:</strong> Review your work before submitting</li>
+                    <li><strong>Not tracking time:</strong> Monitor your hourly rate to ensure projects are worth it</li>
+                </ul>
+
+                <h2>Next Steps</h2>
+                <p>Now that you understand the basics, here's your action plan:</p>
+                <ol>
+                    <li>Choose 2-3 platforms to apply to (we recommend starting with Mercor for quality opportunities)</li>
+                    <li>Set up your workspace (quiet environment, reliable internet, comfortable setup)</li>
+                    <li>Complete platform training and qualification tests</li>
+                    <li>Accept your first project and aim for 95%+ accuracy</li>
+                    <li>Build your reputation over the first month</li>
+                </ol>
+
+                <p>Remember: AI annotation is a skill that improves with practice. Don't be discouraged if early tasks feel challenging—experienced annotators often earn $50-100/hour or more once they develop expertise.</p>
+            </div>
+
+            <div class="author-bio">
+                <h3>About the Author</h3>
+                <p><strong>Sarah Johnson</strong> is a freelance AI annotation specialist with 3+ years of experience in image and text labeling. She has worked on projects for leading AI companies and regularly contributes to JHub's career guides.</p>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

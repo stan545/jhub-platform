@@ -445,7 +445,7 @@ function renderBlogs(blogs) {
                 <p class="blog-date"><i class="far fa-calendar"></i> ${blog.date}</p>
                 <h3 class="blog-title">${blog.title}</h3>
                 <p class="blog-excerpt">${blog.excerpt}</p>
-                <a href="#blog-${blog.id}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                <a href="${blog.link}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
             </div>
         </article>
     `).join('');
