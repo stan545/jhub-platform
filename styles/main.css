@@ -71,6 +71,12 @@ body::before {
     padding: 1rem 20px;
 }
 
+.logo-image {
+    width: 100px;
+    height: 2rem;
+    object-fit: contain;
+}
+
 .nav-brand h1 {
     color: var(--primary-color);
     font-size: 1.85rem;
