@@ -184,7 +184,80 @@
                 height: 250px;
             }
         }
+        html[data-theme="dark"] body {
+            color: #e2e8f0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));
+        }
+
+        html[data-theme="dark"] .article-container {
+            background: #0f172a;
+            box-shadow: 0 20px 40px rgba(2, 6, 23, 0.5);
+        }
+
+        html[data-theme="dark"] .article-header {
+            border-bottom-color: rgba(148, 163, 184, 0.2);
+        }
+
+        html[data-theme="dark"] .article-meta {
+            color: rgba(226, 232, 240, 0.7);
+        }
+
+        html[data-theme="dark"] .article-header h1 {
+            color: #f8fafc;
+        }
+
+        html[data-theme="dark"] .article-header p,
+        html[data-theme="dark"] .article-header .subtitle {
+            color: rgba(226, 232, 240, 0.75);
+        }
+
+        html[data-theme="dark"] .article-body {
+            color: #e2e8f0;
+        }
+
+        html[data-theme="dark"] .article-body h2 {
+            color: #f8fafc;
+            border-left-color: #60a5fa;
+        }
+
+        html[data-theme="dark"] .article-body h3 {
+            color: #e2e8f0;
+        }
+
+        html[data-theme="dark"] .back-link {
+            color: #93c5fd;
+        }
+
+        html[data-theme="dark"] .back-link:hover {
+            color: #bfdbfe;
+        }
+
+        html[data-theme="dark"] .cta-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.75), rgba(99, 102, 241, 0.75));
+            color: #f8fafc;
+        }
+
+        html[data-theme="dark"] .cta-btn {
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        html[data-theme="dark"] .author-bio {
+            background: rgba(30, 41, 59, 0.6);
+            border-top-color: rgba(96, 165, 250, 0.6);
+            color: #e2e8f0;
+        }
     </style>
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('jhub-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = storedTheme === 'dark' || storedTheme === 'light'
+                ? storedTheme
+                : (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
     <div class="article-container">

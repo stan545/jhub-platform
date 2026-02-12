@@ -1,6 +1,7 @@
 // State Management
 const MERCOR_LISTINGS_URL = "https://aws.api.mercor.com/work/listings-explore-page";
 const JOBS_PER_PAGE = 12;
+const THEME_STORAGE_KEY = "jhub-theme";
 let currentPage = 1;
 let allJobs = [...jobsData];
 let filteredJobs = [...jobsData];
@@ -8,11 +9,58 @@ let allBlogs = [...blogData];
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
+    applyTheme(getPreferredTheme());
     renderJobs(filteredJobs);
     renderBlogs(allBlogs);
     initializeEventListeners();
     loadMercorListings();
 });
+
+function getPreferredTheme() {
+    const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    if (storedTheme === "light" || storedTheme === "dark") {
+        return storedTheme;
+    }
+
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? "dark"
+        : "light";
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    updateThemeToggle(theme);
+}
+
+function updateThemeToggle(theme) {
+    const toggleButton = document.getElementById('themeToggle');
+    const toggleButtonMobile = document.getElementById('themeToggleMobile');
+    const isDark = theme === "dark";
+    const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+
+    if (toggleButton) {
+        const icon = toggleButton.querySelector('i');
+        toggleButton.setAttribute('aria-label', label);
+        if (icon) {
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    }
+
+    if (toggleButtonMobile) {
+        const icon = toggleButtonMobile.querySelector('i');
+        toggleButtonMobile.setAttribute('aria-label', label);
+        if (icon) {
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    }
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    applyTheme(nextTheme);
+}
 
 // Event Listeners
 function initializeEventListeners() {
@@ -30,6 +78,8 @@ function initializeEventListeners() {
     const navSearchBtn = document.getElementById('navSearchBtn');
     const navSearch = document.getElementById('navSearch');
     const navSearchInput = document.getElementById('navSearchInput');
+    const themeToggle = document.getElementById('themeToggle');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
     const mobileSearchInput = document.getElementById('mobileSearchInput');
     const mobileSearchBtn = document.getElementById('mobileSearchBtn');
     
@@ -65,6 +115,14 @@ function initializeEventListeners() {
                 navSearch.classList.remove('active');
             }
         });
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', toggleTheme);
     }
 
     if (mobileSearchInput) {
